@@ -304,7 +304,9 @@ namespace LinqTest
         Budget = 844331
     },
 };
-
+            var movieNames = movies.Select(movie => movie.Name);
+            var movieScreenings = movies.Select(movie => movie.Screenings);
+            var popularMovies = movies.Where(movie => movie.Screenings >= 100);
         }
     }
 }
